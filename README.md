@@ -32,6 +32,7 @@ El desarrollo de este proyecto ha sido posible gracias a la colaboración de los
 ## Estructura del proyecto
 
 El proyecto sigue una estructura organizada de carpetas para facilitar su mantenimiento y escalabilidad:  
+  
 /ecommerce-muebles ├── /css │ └── styles.css # Estilos personalizados ├── /js │ └── scripts.js # Scripts JavaScript para la interactividad ├── /images │ └── ... # Imágenes de los productos ├── /bootstrap │ └── ... # Archivos de Bootstrap (si se incluyen localmente) ├── index.html # Página principal (home) └── product.html # Página de detalles de productos
 
 
