@@ -1,0 +1,40 @@
+/* ------------------------------------- BANNER ------------------------------------- */
+.imagen-banner {
+    background-image: url(../img/pexels-photo-4352247.webp);
+    min-height: 350px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.titulo {
+    font-size: 3.5rem;
+}
+.espaciado.rounded-top-4 {
+    transform: translateY(-20px);
+    height: 20px;
+}
+
+/* -------------------------------- SECCIÓN NOSOTROS -------------------------------- */
+#nosotros div {
+    max-width: 516px;
+}
+#nosotros img {
+    max-height: 400px;
+}
+
+/* ------------------------------ ESTILOS DE BOOTSTRAP ------------------------------ */
+.btn-dark {
+    background-color: var(--negro);
+    color: var(--blanco);
+}
+.bg-dark {
+    background-color: var(--negro) !important;
+    color: var(--blanco) !important;
+}
+.card {
+    border: none;
+}
+.col-sm-3 {
+    margin-top: 1.5rem;
+}
