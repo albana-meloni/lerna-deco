@@ -25,9 +25,9 @@ El proyecto está desarrollado con las siguientes tecnologías:
 
 El desarrollo de este proyecto ha sido posible gracias a la colaboración de los siguientes miembros del equipo:
 
-- **Ernesto Huerta** - Desarrollador frontend
-- **Luis Claros** - Desarrollador frontend
-- **Albana Meloni** - Desarrolladora frontend y soporte en diseño UX/UI
+- **Ernesto Huerta**
+- **Luis Claros**
+- **Albana Meloni**
 
 ## Estructura del proyecto
 
