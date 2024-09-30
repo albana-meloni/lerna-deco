@@ -10,3 +10,27 @@
 html {
     scroll-behavior: smooth;
 }
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+    background-color: var(--blanco);
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.navbar {
+    background-color: var(--blanco);
+}
+.nav-link.active {
+    text-decoration: underline;
+}
+.footer {
+    background-color: var(--negro);
+    color: var(--blanco);
+}
