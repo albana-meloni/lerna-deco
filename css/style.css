@@ -11,9 +11,9 @@ html {
     scroll-behavior: smooth;
 }
 body {
-    min-height: 100vh;
     line-height: 1.5;
     background-color: var(--blanco);
+    min-height: 100dvh;
 }
 ul {
     list-style: none;
