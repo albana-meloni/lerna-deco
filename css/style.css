@@ -11,9 +11,9 @@ html {
     scroll-behavior: smooth;
 }
 body {
-    min-height: 100vh;
     line-height: 1.5;
     background-color: var(--blanco);
+    min-height: 100dvh;
 }
 ul {
     list-style: none;
@@ -23,14 +23,32 @@ a {
     text-decoration: none;
     color: inherit;
 }
+img {
+    display: block;
+    max-width: 100%;
+}
 
+/* ------------------------------------- HEADER ------------------------------------- */
 .navbar {
     background-color: var(--blanco);
 }
 .nav-link.active {
     text-decoration: underline;
 }
+.espaciado {
+    display: block;
+    width: 100%;
+    height: 54px;
+    background-color: var(--blanco);
+}
+
+
+/* ------------------------------------- FOOTER ------------------------------------- */
 .footer {
     background-color: var(--negro);
     color: var(--blanco);
+    font-size: 0.9rem;
+}
+.texto-chico {
+    font-size: 10px;
 }
