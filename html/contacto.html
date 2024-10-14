@@ -25,24 +25,56 @@
                     </div>
                     <div class="offcanvas-body">
                         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                        <li class="nav-item">
-                            <a class="nav-link" href="../index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./catalogo.html">Catálogo</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./contacto.html">Contacto</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./perfil.html">Perfil</a>
-                        </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./catalogo.html">Catálogo</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./contacto.html">Contacto</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./perfil.html">Perfil</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
             </div>
         </nav>
     </header>
+
+    <main>
+        <section class="container mt-4">
+            <h2 class="text-center mb-3 pt-5 fw-bolder fs-1">CONTACTO</h2>
+        </section>
+
+        <!--FORMULARIO DE CONTACTO-->   
+
+        <section id="contacto" class="container-sm my-5 px-3">
+            <h2 class="fw-bold fs-1 mb-3">COMUNICATE CON NOSOTROS</h2>
+            <p>Ante cualquier consulta no dudes en comunicarte. Dejá tus datos y consulta utilizando el formulario a continuación y nos contactaremos a la brevedad.</p>
+            <form>
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre *</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" required>
+                </div>
+                <div class="mb-3">
+                    <label for="mail" class="form-label">Mail de contacto *</label>
+                    <input type="email" class="form-control" id="mail" name="mail" required>
+                </div>
+                <div class="mb-3">
+                    <label for="asunto" class="form-label">Asunto *</label>
+                    <input class="form-control" id="asunto" name="asunto" required></input>
+                </div>
+                <div class="mb-3">
+                    <label for="mensaje" class="form-label">Mensaje *</label>
+                    <textarea class="form-control" id="mensaje" name="mensaje" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-dark d-block m-auto rounded-4 px-4 py-2">Enviar</button>
+            </form>
+        </section>
+    </main>
 
 
 
