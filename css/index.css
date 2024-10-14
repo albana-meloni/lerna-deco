@@ -38,3 +38,10 @@
 .col-sm-3 {
     margin-top: 1.5rem;
 }
+
+/* ------------------------------ ESTILOS DE CONTACTO ------------------------------ */
+.error-message {
+    color: red;
+    font-size: 15px;
+    margin-top: 5px;
+  }
