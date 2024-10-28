@@ -90,8 +90,6 @@ function crearHTMLProducto(id, img, descripcion, nombre, precio) {
 	return card;
 }
 
-const containerProductos = document.getElementById("container-productos");
-
 function mostrarProducto(producto, div) {
 	let productoCard = crearHTMLProducto(
 		producto.id,
@@ -103,11 +101,18 @@ function mostrarProducto(producto, div) {
 	div.innerHTML += productoCard;
 }
 
-productos.forEach((producto) => {
-	mostrarProducto(producto, containerProductos);
-});
+const containerProductos = document.getElementById("container-productos");
+const productosDestacados = document.getElementById("productos-populares");
 
-
+if (productosDestacados === null) {
+	productos.forEach((producto) => {
+		mostrarProducto(producto, containerProductos);
+	});
+} else if (containerProductos === null) {
+	productos.splice(3, productos.length - 4).forEach((producto) => {
+		mostrarProducto(producto, productosDestacados);
+	});
+}
 
 /* let containers = document.getElementById("container-productos").children;
 
