@@ -14,8 +14,7 @@ html {
 }
 body {
     line-height: 1.5;
-    background-color: var(--blanco);
-    min-height: 100dvh;
+    background-color: var(--blanco);    
 }
 ul {
     list-style: none;
