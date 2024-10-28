@@ -73,36 +73,44 @@ let productos = [
 	},
 ];
 
-function crearProducto(img, descripcion, nombre, precio) {
+function crearHTMLProducto(id, img, descripcion, nombre, precio) {
 	let card = `
     <div class="col-sm-3">
         <div class="card text-center h-100">
-            <a href="./producto.html" name="${nombre}">
+            <button type="submit" name="id" value="${id}">
                 <img src="${img}" class="card-img-top" alt="${descripcion}">
                 <div class="card-body">
                     <h5 class="card-title">${nombre}</h5>
                     <p class="card-text">$${precio}</p>
                 </div>
-            </a>
+            </button>
         </div>
     </div>
     `;
 	return card;
 }
 
-productos.forEach((producto) => {
-	let productoCard = crearProducto(
+const containerProductos = document.getElementById("container-productos");
+
+function mostrarProducto(producto, div) {
+	let productoCard = crearHTMLProducto(
+		producto.id,
 		producto.imagen,
 		producto.descripcion,
 		producto.nombre,
 		producto.precio
 	);
-	document.getElementById("container-productos").innerHTML += productoCard;
-});
-
-let containers = document.getElementById("container-productos").children;
-
-for (div of containers) {
-    console.log(div.children[0]);
+	div.innerHTML += productoCard;
 }
 
+productos.forEach((producto) => {
+	mostrarProducto(producto, containerProductos);
+});
+
+
+
+/* let containers = document.getElementById("container-productos").children;
+
+for (div of containers) {
+	console.log(div.children[0]);
+} */

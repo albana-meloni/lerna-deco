@@ -28,6 +28,11 @@ img {
     display: block;
     max-width: 100%;
 }
+button {
+    border: 0;
+    outline: 0;
+    background-color: inherit;
+}
 
 /* ------------------------------------- HEADER ------------------------------------- */
 .navbar {
@@ -52,4 +57,10 @@ img {
 }
 .texto-chico {
     font-size: 10px;
+}
+
+@media screen and (max-width: 576px) {
+    .footer {
+        position: static;
+    }
 }
