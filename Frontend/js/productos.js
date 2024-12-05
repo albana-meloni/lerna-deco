@@ -119,3 +119,62 @@ if (productosDestacados === null) {
 for (div of containers) {
 	console.log(div.children[0]);
 } */
+
+function generarTarjetasDeProductos(productos) {
+	const contenedor = document.getElementById('container-productos');
+	if (!contenedor) return;
+	contenedor.innerHTML = '';
+
+	productos.forEach((producto) => {
+		const card = `
+				<div class="card m-3 h-100" style="width: 25rem;" data-id="${producto.id}">
+					<a href="producto.html?id=${producto.id}">
+						<img src="${producto.imagen}" class="card-img-top" alt="${producto.nombre}">
+						<div class="card-body">
+							<h1 class="card-title text-start text-dark-emphasis p-1 fw-bolder">${producto.nombre}</h1>
+							<p class="card-text text-start p-1">${producto.descripcion}</p>
+							<div class="row row-cols-2 h-100">
+								<p class="card-text text-center mb-0 fs-2 fw-bold">$${producto.precio}</p>
+								<button type="button" class="btn btn-dark d-block m-auto rounded-4 px-4 py-2">Añadir al carrito</button>
+							</div>
+						</div>
+					</a>
+				</div>
+			`;
+		contenedor.innerHTML += card;
+	});
+}
+
+
+function obtenerProductoID() {
+	const params = new URLSearchParams(window.location.search);
+	return parseInt(params.get("id"), 10);
+}
+
+function mostrarProducto(producto) {
+	const contenedor = document.getElementById('product-detail');
+	if (!contenedor) return;
+	contenedor.innerHTML = `
+			<h1>${producto.nombre}</h1>
+			<img src="${producto.imagen}" alt="${producto.nombre}" class="img-fluid">
+			<p>${producto.descripcion}</p>
+			<p>Precio: $${producto.precio}</p>
+			<button type="button" class="btn btn-dark">Añadir al carrito</button>
+		`;
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+	if (document.getElementById('container-productos')) {
+		generarTarjetasDeProductos(productos);
+	}
+
+	if (document.getElementById('product-detail')) {
+		const productoID = obtenerProductoID();
+		const producto = productos.find(p => p.id === productoID);
+		if (producto) {
+			mostrarProducto(producto);
+		} else {
+			document.getElementById('product-detail').innerHTML = '<p>Producto no encontrado.</p>';
+		}
+	}
+});
