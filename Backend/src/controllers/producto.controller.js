@@ -1,6 +1,5 @@
 const Producto = require('../models/producto.model');
 
-// Obtener todos los productos
 exports.getAllProductos = async (req, res) => {
     try {
         const productos = await Producto.findAll();
@@ -10,7 +9,6 @@ exports.getAllProductos = async (req, res) => {
     }
 };
 
-// Obtener un producto por ID
 exports.getProductoById = async (req, res) => {
     try {
         const producto = await Producto.findByPk(req.params.id);
@@ -23,7 +21,6 @@ exports.getProductoById = async (req, res) => {
     }
 };
 
-// Crear un nuevo producto
 exports.createProducto = async (req, res) => {
     try {
         const newProducto = await Producto.create(req.body);
@@ -33,7 +30,6 @@ exports.createProducto = async (req, res) => {
     }
 };
 
-// Actualizar un producto
 exports.updateProducto = async (req, res) => {
     try {
         const updated = await Producto.update(req.body, { where: { id: req.params.id } });
@@ -46,7 +42,6 @@ exports.updateProducto = async (req, res) => {
     }
 };
 
-// Eliminar un producto
 exports.deleteProducto = async (req, res) => {
     try {
         const deleted = await Producto.destroy({ where: { id: req.params.id } });

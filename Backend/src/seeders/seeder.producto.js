@@ -78,17 +78,15 @@ const productos = [
 
 const seedProductos = async () => {
     try {
-        // Conecta a la base de datos
         await sequelize.authenticate();
 
-        // Inserta los datos
         await Producto.bulkCreate(productos);
 
         console.log('Datos insertados correctamente');
     } catch (error) {
         console.error('Error al insertar los datos:', error.message);
     } finally {
-        await sequelize.close(); // Cierra la conexión
+        await sequelize.close();
     }
 };
 
