@@ -6,7 +6,8 @@
   "scripts": {
     "build": "npm install",
     "start": "node src/index.js",
-    "dev": "nodemon src/index.js"
+    "dev": "nodemon src/index.js",
+    "seed": "node src/seeders/seeder.producto.js"
   },
   "author": "Luis Claros",
   "license": "ISC",
