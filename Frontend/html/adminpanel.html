@@ -37,7 +37,7 @@
                             <a class="nav-link" href="./contacto.html">Contacto</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./perfil.html">Perfil</a>
+                            <a class="nav-link" href="./login.html">Perfil</a>
                         </li>
                         </ul>
                     </div>
@@ -51,39 +51,66 @@
         <section class="container-sm mb-5">
             <article class="mt-5">
                 <h3 class="fs-1 m-2 fw-bolder">Panel de Administrador</h3>
-                <button class="btn btn-success d-block my-5 ms-auto">Agregar producto</button>
-                <table class="table table-light table-striped">
-                    <thead>
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Producto</th>
-                            <th scope="col">Precio</th>
-                            <th scope="col">Descripción</th>
-                            <th scope="col">Imagen</th>
-                            <th scope="col">Acciones</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- cada producto -->
-                        <tr>
-                            <th scope="row">1</th>
-                            <th>silla</th>
-                            <th>100</th>
-                            <th>silla bonita</th>
-                            <th>sila.jpg</th>
-                            <th>
-                                <button class="btn btn-secondary">Modificar</button>
-                                <button class="btn btn-danger">Eliminar</button>
-                            </th>
-                        </tr>
-                        <!-- cada producto -->
-                    </tbody>
-                </table>
+                <!-- <button class="btn btn-success d-block my-5 ms-auto">Agregar producto</button> -->
+                <button class="btn btn-success d-block my-5 ms-auto" data-bs-toggle="modal" data-bs-target="#modalAgregar">Agregar Producto</button>
+
+                
+                    <table class="table table-light table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Precio</th>
+                                <th scope="col">Descripción</th>
+                                <th scope="col">Imagen</th>
+                                <th scope="col">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabla-productos">
+                            <!-- Filas generadas dinámicamente -->
+                        </tbody>
+                    </table>
             </article>
         </section>
+                <!-- Modal para agregar producto -->
+        <div class="modal fade" id="modalAgregar" tabindex="-1" aria-labelledby="modalAgregarLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="modalAgregarLabel">Agregar Producto</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                <form id="formAgregarProducto">
+                    <div class="mb-3">
+                    <label for="inputNuevoNombre" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="inputNuevoNombre" required>
+                    </div>
+                    <div class="mb-3">
+                    <label for="inputNuevoPrecio" class="form-label">Precio</label>
+                    <input type="number" class="form-control" id="inputNuevoPrecio" required>
+                    </div>
+                    <div class="mb-3">
+                    <label for="inputNuevaDescripcion" class="form-label">Descripción</label>
+                    <textarea class="form-control" id="inputNuevaDescripcion" rows="3" required></textarea>
+                    </div>
+                    <div class="mb-3">
+                    <label for="inputNuevaImagen" class="form-label">URL de la Imagen</label>
+                    <input type="text" class="form-control" id="inputNuevaImagen" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Agregar Producto</button>
+                </form>
+                </div>
+            </div>
+            </div>
+        </div>
+        
+
+
     </main>
 
     <!-- -------------------------- SCRIPTS -------------------------- -->
+     <script src="../js/admin.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

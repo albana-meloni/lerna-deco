@@ -73,6 +73,10 @@ let productos = [
 	},
 ];
 
+
+
+
+
 function crearHTMLProducto(id, img, descripcion, nombre, precio) {
 	let card = `
     <div class="col-sm-3">
